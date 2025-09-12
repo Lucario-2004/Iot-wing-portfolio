@@ -1,18 +1,21 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { projectsData } from '@/utils/data/projects-data';
 import ProjectCard from './project-card';
 
 const Projects = () => {
-  const [activeGroup, setActiveGroup] = useState(0);
   const containerRef = useRef(null);
+  const [activeGroup, setActiveGroup] = useState(0);
 
   // Group projects in sets of 4
-  const groups = [];
-  for (let i = 0; i < projectsData.length; i += 4) {
-    groups.push(projectsData.slice(i, i + 4));
-  }
+  const groups = useMemo(() => {
+    const grouped = [];
+    for (let i = 0; i < projectsData.length; i += 4) {
+      grouped.push(projectsData.slice(i, i + 4));
+    }
+    return grouped;
+  }, []);
 
   // Scroll handler to update active group based on scroll position
   useEffect(() => {
