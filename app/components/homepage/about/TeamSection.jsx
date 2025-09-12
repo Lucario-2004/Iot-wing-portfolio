@@ -9,13 +9,15 @@ const TeamSection = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {teamMembers.map((member, index) => (
           <div key={index} className="bg-[#1a1443] rounded-lg p-4 text-center">
-            <Image
-              src={member.profile}
-              alt={member.name}
-              width={150}
-              height={150}
-              className="rounded-full mx-auto mb-4 object-cover aspect-square"
-            />
+            {member.profile && (
+              <Image
+                src={member.profile}
+                alt={member.name}
+                width={150}
+                height={150}
+                className="rounded-full mx-auto mb-4 object-cover aspect-square"
+              />
+            )}
             <h3 className="text-white text-lg font-semibold mb-2">{member.name}</h3>
             <div className="flex justify-center space-x-4">
               <a
