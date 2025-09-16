@@ -29,7 +29,6 @@ const ProjectsScrollAnimation = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: container,
-        pin: true,
         scrub: 1,
         start: "top top",
         end: () => `+=${container.offsetHeight * (cardsRef.current.length - 1)}`,
