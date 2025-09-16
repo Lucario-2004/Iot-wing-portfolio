@@ -92,7 +92,7 @@ import thingspeak from '../app/assets/svg/skills/thingspeak.png';
 import arduino from '../app/assets/svg/skills/arduino.png';
 import esp from '../app/assets/svg/skills/esp.png';
 import raspberryPi from '../app/assets/svg/skills/raspberry pi.png';
-import jestson from '../app/assets/svg/skills/jetson.png';
+import jetson from '../app/assets/svg/skills/jetson.png';
 import wirelessCommunication from '../app/assets/svg/skills/wireless communication.png';
 import nlp from '../app/assets/svg/skills/nlp.png';
 import dataAnalytics from '../app/assets/svg/skills/data analytics.png';
@@ -284,12 +284,12 @@ export const skillsImage = (skill) => {
       return thingspeak;
     case 'arduino':
       return arduino;
-    case 'esp  espressif boards ':
+    case 'esp ( espressif boards )':
       return esp;
     case 'raspberry pi':
       return raspberryPi;
-    case 'jestson':
-      return jestson;
+    case 'jetson':
+      return jetson;
     case 'wireless communication':
       return wirelessCommunication;
     case 'nlp':
